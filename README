@@ -1,0 +1,63 @@
+The Tabs Indicator Plugin is an extension to the jQueryUI Tabs Widget. Essentially, it piggy-backs off of the Tabs Widget.
+
+This plugin was inspired by the Economist App which has a series of dots along the bottom of multi-page content. The active page is noted by a different style.
+To navigate to another page, you simply tap the dot - which selects that page and changes the styles accordingly. 
+
+This plugin binds to all of the Tabs UI events: tabsselect, tabsload, tabsshow,tabsadd, tabsremove,tabsenable & tabsdisable. Whatever actions you perform on the 
+tabs, those actions will be reflected in the indicator. For example, if you disable the second tab, the second indicator will be disabled as well. Optionally, you
+can elect to hide the tabs and just use the tab indicator as your method of navigation. By default, the tabs are displayed. 
+
+To load the plugin: 
+
+$('#tabs').tabs().tabindicator();
+
+To load the plugin and to suppress the tabs display:
+
+$('#tabs').tabs().tabindicator({displayTabs: 'hide'});
+
+This plugin is designed to allow you to interact with the tabs widget like you always have. This plugin will simply respond to the events the tabs widget raises.
+
+This plugin incorporates ThemeRoller so that any styles you choose, whether they are from an existing template or custom, this plugin will reflect those styles
+so long as your theme is ThemeRoller compliant. For demo purposes, I've included the ui-lightness and ui-darkness themes. example1.html uses the ui-darkness theme and
+example-2 uses the ui-lightness theme.
+
+Required files:
+
+tabindicator.js
+tabindicator.css
+
+To make your existing tabs widget capable of using this plugin and displaying the indicators, you must add the following HTML:
+
+<div class="tabIndicatorContainer"></div>
+
+The following is an example of a tabs widget that incorporates the tabIndicatorContainer DIV:
+
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">First</a></li>
+				<li><a href="#tabs-2">Second</a></li>
+				<li><a href="#tabs-3">Third</a></li>
+			</ul>
+			<div id="tabs-1">Page 1</div>
+			<div id="tabs-2">Page 2</div>
+			<div id="tabs-3">Page 3</div>
+			
+			<div class="tabIndicatorContainer"></div>
+			
+		</div>
+
+
+Also, there is a test fixture which should provide additional guidance on usage. You can find that material in the /tests folder.
+
+Enjoy..
+
+< JVP >
+
+John V. Petersen
+twitter: @johnvpetersen
+
+
+
+
+
+     
